@@ -36,6 +36,20 @@ class ScheduleScreen extends StatelessWidget {
                     size: 30,
                   ),
                 ],
+              ),
+              const SizedBox(
+                height: 25,
+              ),
+              Row(
+                children: [
+                  Text(
+                    'MONDAY 16',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.8),
+                      fontSize: 13,
+                    ),
+                  ),
+                ],
               )
             ],
           ),
