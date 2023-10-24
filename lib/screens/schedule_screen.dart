@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class ScheduleScreen extends StatelessWidget {
   const ScheduleScreen({super.key});
 
+  final int today = 16;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,11 +45,53 @@ class ScheduleScreen extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'MONDAY 16',
+                    'MONDAY $today',
                     style: TextStyle(
                       color: Colors.white.withOpacity(0.8),
                       fontSize: 13,
                     ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+              Row(
+                children: [
+                  const Text(
+                    'TODAY',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 35,
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 5,
+                    ),
+                    child: Icon(
+                      Icons.circle,
+                      color: Colors.redAccent.shade700,
+                      size: 8,
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      for (int i = 1; i <= 4; i++)
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            right: 10,
+                          ),
+                          child: Text(
+                            '${today + i}',
+                            style: TextStyle(
+                              color: Colors.white.withOpacity(0.5),
+                              fontSize: 32,
+                            ),
+                          ),
+                        ),
+                    ],
                   ),
                 ],
               )
