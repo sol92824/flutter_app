@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/widgets/schedule_card.dart';
 
 class ScheduleScreen extends StatelessWidget {
   const ScheduleScreen({super.key});
@@ -94,7 +95,19 @@ class ScheduleScreen extends StatelessWidget {
                     ],
                   ),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              ScheduleCard(
+                cardColor: Colors.yellow.shade400,
+              ),
+              ScheduleCard(
+                cardColor: Colors.purple.shade400,
+              ),
+              ScheduleCard(
+                cardColor: Colors.green.shade400,
+              ),
             ],
           ),
         ));
