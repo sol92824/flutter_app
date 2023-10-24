@@ -105,6 +105,7 @@ class ScheduleScreen extends StatelessWidget {
                 startMinutes: '30',
                 endHour: '12',
                 endMinutes: '20',
+                cardName: 'DESIGN METTING',
               ),
               ScheduleCard(
                 cardColor: Colors.purple.shade400,
@@ -112,6 +113,7 @@ class ScheduleScreen extends StatelessWidget {
                 startMinutes: '35',
                 endHour: '14',
                 endMinutes: '10',
+                cardName: 'DAILY PROJECT',
               ),
               ScheduleCard(
                 cardColor: Colors.green.shade400,
@@ -119,6 +121,7 @@ class ScheduleScreen extends StatelessWidget {
                 startMinutes: '00',
                 endHour: '16',
                 endMinutes: '30',
+                cardName: 'WEEKLY PLANNING',
               ),
             ],
           ),

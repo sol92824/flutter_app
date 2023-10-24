@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ScheduleCard extends StatelessWidget {
   final Color cardColor;
   final String startHour, startMinutes, endHour, endMinutes;
+  final String cardName;
 
   const ScheduleCard(
       {super.key,
@@ -10,7 +11,8 @@ class ScheduleCard extends StatelessWidget {
       required this.startHour,
       required this.startMinutes,
       required this.endHour,
-      required this.endMinutes});
+      required this.endMinutes,
+      required this.cardName});
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +71,18 @@ class ScheduleCard extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         )),
                   ]),
+                ),
+                // child 요소를 렌더링 영역의 최대 사이즈까지 확장시켜주는 위젯
+                Expanded(
+                  child: Text(
+                    cardName,
+                    style: const TextStyle(
+                      fontSize: 47,
+                      fontWeight: FontWeight.w500,
+                      // 텍스트 줄간 간격 조정
+                      height: 0.9,
+                    ),
+                  ),
                 )
               ],
             ),
