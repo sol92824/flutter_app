@@ -106,6 +106,7 @@ class ScheduleScreen extends StatelessWidget {
                 endHour: '12',
                 endMinutes: '20',
                 cardName: 'DESIGN METTING',
+                attendeesList: const ['ALEX', 'HELENA', 'NANA'],
               ),
               ScheduleCard(
                 cardColor: Colors.purple.shade400,
@@ -114,6 +115,15 @@ class ScheduleScreen extends StatelessWidget {
                 endHour: '14',
                 endMinutes: '10',
                 cardName: 'DAILY PROJECT',
+                attendeesList: const [
+                  'ME',
+                  'RICHARD',
+                  'CIRY',
+                  'JOKER',
+                  'HENA',
+                  'CASEY',
+                  'SAM'
+                ],
               ),
               ScheduleCard(
                 cardColor: Colors.green.shade400,
@@ -122,6 +132,7 @@ class ScheduleScreen extends StatelessWidget {
                 endHour: '16',
                 endMinutes: '30',
                 cardName: 'WEEKLY PLANNING',
+                attendeesList: const ['DEN', 'NANA', 'MARK'],
               ),
             ],
           ),

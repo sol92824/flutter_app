@@ -4,6 +4,7 @@ class ScheduleCard extends StatelessWidget {
   final Color cardColor;
   final String startHour, startMinutes, endHour, endMinutes;
   final String cardName;
+  final List<String> attendeesList;
 
   const ScheduleCard(
       {super.key,
@@ -12,7 +13,8 @@ class ScheduleCard extends StatelessWidget {
       required this.startMinutes,
       required this.endHour,
       required this.endMinutes,
-      required this.cardName});
+      required this.cardName,
+      required this.attendeesList});
 
   @override
   Widget build(BuildContext context) {
@@ -28,11 +30,13 @@ class ScheduleCard extends StatelessWidget {
         height: 155,
         child: Column(
           children: [
+            const SizedBox(
+              height: 20,
+            ),
             Row(
               children: [
                 Padding(
                   padding: const EdgeInsets.symmetric(
-                    vertical: 20,
                     horizontal: 15,
                   ),
                   child: Column(children: [
@@ -86,6 +90,41 @@ class ScheduleCard extends StatelessWidget {
                 )
               ],
             ),
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 12,
+                horizontal: 55,
+              ),
+              child: Row(
+                children: [
+                  for (String attendee in attendeesList)
+                    if (attendeesList.indexOf(attendee) < 3)
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          right: 20,
+                        ),
+                        child: Text(
+                          attendee,
+                          style: TextStyle(
+                              color: attendee == "ME"
+                                  ? Colors.black
+                                  : Colors.black38,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                  // 참석자가 3명 이상일 때는 +{추가되는 인원} 텍스트 노출
+                  if (attendeesList.length > 3)
+                    Text(
+                      "+${attendeesList.length - 3}",
+                      style: const TextStyle(
+                          color: Colors.black38,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500),
+                    ),
+                ],
+              ),
+            )
           ],
         ),
       ),
