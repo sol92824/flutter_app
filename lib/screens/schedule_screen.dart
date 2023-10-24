@@ -76,24 +76,19 @@ class ScheduleScreen extends StatelessWidget {
                       size: 8,
                     ),
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      for (int i = 1; i <= 4; i++)
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            right: 10,
-                          ),
-                          child: Text(
-                            '${today + i}',
-                            style: TextStyle(
-                              color: Colors.white.withOpacity(0.5),
-                              fontSize: 32,
-                            ),
-                          ),
+                  for (int i = 1; i <= 4; i++)
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        right: 14,
+                      ),
+                      child: Text(
+                        '${today + i}',
+                        style: TextStyle(
+                          color: Colors.white.withOpacity(0.5),
+                          fontSize: 32,
                         ),
-                    ],
-                  ),
+                      ),
+                    ),
                 ],
               ),
               const SizedBox(
