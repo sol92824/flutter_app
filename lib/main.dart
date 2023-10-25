@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/screens/schedule_screen.dart';
+import 'package:flutter_app/screens/pomodoro_screen.dart';
 
 // main : 플러터 어플리케이션 진입점
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         // home : 앱의 기본 경로
         // Scaffold : 기본적인 디자인 뼈대를 구성하는 위젯
         home: Scaffold(
-      body: ScheduleScreen(),
+      body: PomodoroScreen(),
     ));
   }
 }
